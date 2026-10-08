@@ -1,11 +1,17 @@
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import NavBar from './Components/NavBar'
+import Home from './Components/Home'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold text-center mt-3.5'>Welcome to Buzzer App</h1>
+      <NavBar /> 
+      <Routes>
+          <Route path='/' element={ <Home />} />
+      </Routes> 
     </>
   )
 }
