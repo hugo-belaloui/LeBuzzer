@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import NavBar from './Components/NavBar'
 import Home from './Components/Home'
+import User from './Components/User'
+import Admin from './Components/Admin'
 
 function App() {
 
@@ -10,7 +12,9 @@ function App() {
     <>
       <NavBar /> 
       <Routes>
-          <Route path='/' element={ <Home />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/user' element={<User />} />
+          <Route path='/admin' element={<Admin />} />
       </Routes> 
     </>
   )
