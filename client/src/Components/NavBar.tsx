@@ -1,3 +1,4 @@
+import { Zap } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,13 +10,16 @@ export default function Navbar() {
   return (
     <nav className="relative bg-zinc-950 text-white shadow-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
+        {/* Logo : un seul lien */}
         <Link
           to="/"
           onClick={closeMenu}
-          className="text-2xl font-bold"
+          className="flex items-center gap-2 text-3xl font-black"
         >
-         Le <span className="text-yellow-400">Buzzer</span>
+          <Zap className="h-10 w-10 fill-yellow-400 text-yellow-400" />
+          <span>
+            Le <span className="text-yellow-400">Buzzer</span>
+          </span>
         </Link>
 
         {/* Liens desktop */}
@@ -85,4 +89,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
